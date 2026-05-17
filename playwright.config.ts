@@ -1,5 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
-import type { TestOptions } from './test-options';
+import type { TestOptions } from './test-options.js';
+import { createArgosReporterOptions } from "@argos-ci/playwright/reporter";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 /**
  * Read environment variables from file.
@@ -33,7 +39,18 @@ export default defineConfig<TestOptions>({
     ['json', {outputFile: 'test-results/jsonReport.json'}],
     ['junit', {outputFile: 'test-results/junitReport.xml'}],
     //["allure-playwright"],
-    ['html']
+    ['html'],
+    process.env.CI ? ["dot"] : ["list"],
+    [
+      "@argos-ci/playwright/reporter",
+      createArgosReporterOptions({
+        // Upload to Argos on CI only.
+        uploadToArgos: !!process.env.CI,
+
+        // Set your Argos token (required if not using GitHub Actions).
+        //token: "<YOUR-ARGOS-TOKEN>",
+      }),
+    ],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -49,6 +66,7 @@ export default defineConfig<TestOptions>({
     trace: 'on-first-retry',
     // actionTimeout: 5000,
     // navigationTimeout: 5000,
+    screenshot: 'only-on-failure',
     video:{
       mode: 'off',
       size: {width: 1920, height: 1020}
