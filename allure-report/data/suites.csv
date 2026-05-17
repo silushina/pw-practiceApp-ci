@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7","Locator syntax rules","chromium","2026-05-16","skipped","2026-05-16","","firstTest.spec.ts","",""
+"","9319","Reusing the locators","chromium","2026-05-16","passed","2026-05-16","","firstTest.spec.ts","",""
+"","2373","Assertions","chromium","2026-05-16","passed","2026-05-16","","firstTest.spec.ts","",""
+"","2227","Extracting values","chromium","2026-05-16","passed","2026-05-16","","firstTest.spec.ts","",""
+"","9176","Locating child elements","chromium","2026-05-16","passed","2026-05-16","","firstTest.spec.ts","",""
+"","9169","User facing locators","chromium","2026-05-16","passed","2026-05-16","","firstTest.spec.ts","",""
+"","9174","Locatina parent element","chromium","2026-05-16","passed","2026-05-16","","firstTest.spec.ts","",""
