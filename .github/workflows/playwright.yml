@@ -22,6 +22,7 @@ jobs:
         # Здесь мы берем секрет из GitHub и записываем его в переменную окружения для тестов
         USERNAME: ${{secrets.USERNAME}}
         PASSWORD: ${{secrets.PASSWORD}}
+        ARGOS_TOKEN: ${{secrets.ARGOS_TOKEN}}
       run: npx playwright test usePageObjects.spec.ts
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
