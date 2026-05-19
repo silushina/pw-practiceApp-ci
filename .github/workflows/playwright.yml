@@ -18,6 +18,10 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps --force
     - name: Run Playwright tests
+      env:
+        # Здесь мы берем секрет из GitHub и записываем его в переменную окружения для тестов
+        USERNAME: ${{secrets.USERNAME}}
+        PASSWORD: ${{secrets.PASSWORD}}
       run: npx playwright test usePageObjects.spec.ts
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
