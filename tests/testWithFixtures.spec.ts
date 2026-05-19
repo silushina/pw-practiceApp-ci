@@ -1,4 +1,4 @@
-import {test} from '../test-options'
+import {test} from '../test-options.js'
 import {faker} from '@faker-js/faker'
 
 

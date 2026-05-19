@@ -1,5 +1,5 @@
 import {Locator, Page} from '@playwright/test'
-import { HelperBase } from './helperBase'
+import { HelperBase } from './helperBase.js'
 
 export class NavigationPage extends HelperBase{
 

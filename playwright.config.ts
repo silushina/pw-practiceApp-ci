@@ -56,7 +56,7 @@ export default defineConfig<TestOptions>({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'http://localhost:4200',
-    globalsQAURL: 'https://www.globalsqa.com/demo-site/draganddrop/',
+    //globalsQAURL: 'https://www.globalsqa.com/demo-site/draganddrop/',
     // baseURL: process.env.DEV === '1' ? 'http://localhost:4200'
     //       : process.env.STAGE === '1' ? 'http://localhost:4201'
     //       : 'http://localhost:4200',
@@ -90,7 +90,6 @@ export default defineConfig<TestOptions>({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      fullyParallel: true
     },
 
     {

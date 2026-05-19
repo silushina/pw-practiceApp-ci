@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test'
-import { NavigationPage } from '../page-objects/navigatetonPage'
+import { NavigationPage } from '../page-objects/navigatetonPage.js'
 
 test.describe.configure({mode: 'parallel'})
 

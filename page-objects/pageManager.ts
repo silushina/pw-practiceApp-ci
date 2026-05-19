@@ -1,7 +1,7 @@
 import {Page, expect} from '@playwright/test';
-import {NavigationPage} from '../page-objects/navigatetonPage'
-import { FormLayoutsPage } from '../page-objects/formLayoutsPage'
-import { DatePickerPage } from '../page-objects/datePickerPage'
+import {NavigationPage} from '../page-objects/navigatetonPage.js'
+import { FormLayoutsPage } from '../page-objects/formLayoutsPage.js'
+import { DatePickerPage } from '../page-objects/datePickerPage.js'
 
 export class PageManager{
 

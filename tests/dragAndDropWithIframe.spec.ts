@@ -1,5 +1,5 @@
 import {expect} from '@playwright/test';
-import {test} from '../test-options'
+import {test} from '../test-options.js'
 
 test('drag and drop with iframe', async({page, globalsQAURL}) => {
     await page.goto(globalsQAURL)

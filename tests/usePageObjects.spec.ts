@@ -3,9 +3,9 @@ import {PageManager} from '../page-objects/pageManager.js'
 import {faker} from '@faker-js/faker'
 import { argosScreenshot } from "@argos-ci/playwright";
 
-// test.beforeEach(async ({page}) => {
-//     await page.goto('/')
-// })
+test.beforeEach(async ({page}) => {
+    await page.goto('/')
+})
 
 test('navigate to Form Layouts @smoke', async({page}) => {
     const pm = new PageManager(page)

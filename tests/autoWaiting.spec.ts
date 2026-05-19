@@ -30,7 +30,7 @@ test.skip('alternative waits', async ({page}) => {
 
 
     //_wait for network calls to be completed (NOT RECOMMENDED)
-    await page.waitFor
+    //await page.waitFor
 
     const text = await successButton.allTextContents()
     expect(text).toContain('Data loaded with AJAX get request.')

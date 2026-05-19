@@ -1,5 +1,5 @@
 import { Page, expect } from "@playwright/test";
-import { HelperBase } from "./helperBase";
+import { HelperBase } from "./helperBase.js";
 
 export class DatePickerPage extends HelperBase{
 
